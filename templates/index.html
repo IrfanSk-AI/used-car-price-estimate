@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <form action="/predict" method="post">
+            <h2>Predict The Car Price</h2><br>
+            <p>
+            <label>Car Name
+            <input type="text" name="car_name" required>
+            </label>
+            </p>
+
+            <p>
+            <label>Present Showroom Price(In lakhs)
+            <input type="number" name="present_price" required>
+            </label>
+            </p>
+
+            <p>
+            <label>Car Registration Year
+            <input type="number" name="year" required>
+            </label>
+            </p>
+
+            <p>
+            <label>Total KiloMetres Driven
+            <input type="number" name="kilometres" required>
+            </label>
+            </p>
+
+            <p>
+            <label>Number of Owners
+            <input type="number" name="owners" required>
+            </label>
+            </p>
+
+            <fieldset>
+            <legend>What is the Fuel Type?</legend>
+            <p><label> <input type="radio" name="fuel_type" required value="Petrol"> Car </label></p>
+            <p><label> <input type="radio" name="fuel_type" required value="Diesel"> Van </label></p>
+            <p><label> <input type="radio" name="fuel_type" required value="CNG"> Tuk Tuk </label></p>
+            </fieldset>
+
+            <fieldset>
+            <legend>What is the Seller Type?</legend>
+            <p><label> <input type="radio" name="Seller_Type" required value="Dealer"> Dealer </label></p>
+            <p><label> <input type="radio" name="Seller_Type" required value="Individual"> Individual </label></p>
+            </fieldset>
+
+            <fieldset>
+            <legend>What is the Transmission Type?</legend>
+            <p><label> <input type="radio" name="Transmission" required value="Manual"> Manual </label></p>
+            <p><label> <input type="radio" name="Transmission" required value="Automatic"> Automatic </label></p>
+            </fieldset>
+
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br>
+
+        </form>
+
+
+
+        <br><br><h1>{{ prediction_text }}</h1>
+
+
+
+
+
+</body>
+
+</html>
